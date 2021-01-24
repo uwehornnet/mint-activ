@@ -1,0 +1,52 @@
+.contact
+    position: relative
+    padding: 4rem 0
+    overflow: hidden
+    &__container
+        @extend .container
+    &__columns
+        margin-top: 4rem
+        display: grid
+        grid-template-columns: 320px auto
+        grid-column-gap: 4rem
+        @media(max-width: 1023px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-column-gap: 2rem
+        @media(max-width: 767px)
+            grid-template-columns: repeat(1, 1fr)
+            grid-row-gap: 4rem
+    &__column
+        &--header
+            padding: .4rem 0
+            border-bottom: 1px solid $light
+            margin-bottom: 2rem
+            strong
+                display: block
+                text-transform: uppercase
+                font-size: 24px
+    .flatpickr-calendar
+        border-radius: 0px
+        box-shadow: none
+        border: 1px solid $light
+        @media(max-width: 767px)
+            margin: 0px auto
+        @media(max-width: 320px)
+            max-width: 280px
+            .dayContainer
+                max-width: 280px
+                width: 280px
+                min-width: auto
+
+        
+
+        .today
+            border-bottom-color: $primary !important
+            &:hover
+                background-color: $primary !important
+                background: $primary !important
+                border-color: $primary !important
+
+        .selected
+            background-color: $primary !important
+            background: $primary !important
+            border-color: $primary !important

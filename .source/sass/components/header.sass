@@ -1,0 +1,139 @@
+.header
+    position: relative
+
+    &__container
+        @extend .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__topbar
+        background-color: $dark
+        padding: .4rem 0
+
+        p
+            margin: 0
+            padding: 0
+            color: $white
+            display: flex
+            align-items: center
+            font-size: .8rem
+            @media(max-width: 767px)
+
+                &:last-of-type
+                    display: none
+
+            span
+                display: inline-block
+                height: 24px
+                width: 24px
+                border-radius: 50%
+                background-color: $white
+                margin-right: .8rem
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+    &__bar
+        background-color: $white
+        text-align: center
+
+    &__navigation
+        position: relative
+        padding: .8rem 0
+        @media(max-width: 767px)
+            padding: 0
+
+        &--trigger
+            display: none
+            @media(max-width: 767px)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                z-index: 99999
+                height: 40px
+                width: 40px
+                position: fixed
+                top: 32px
+                right: 5vw
+                span
+                    width: 100%
+                    height: 3px
+                    background-color: $dark
+                    display: block
+                    position: relative
+                    transition: background-color .2s ease .2s !important
+
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: -11px
+                        left: 0
+                        height: 100%
+                        width: 100%
+                        background-color: $dark
+                        transition: transform .2s linear, top .2s linear .2s
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 11px
+                        left: 0
+                        height: 100%
+                        width: 100%
+                        background-color: $dark
+                        transition: transform .2s linear, top .2s linear .2s
+
+        &--list
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            margin: 0
+            list-style-type: none
+            transition: all ease .4s
+            @media(max-width: 767px)
+                position: fixed
+                top: 0
+                left: 100%
+                height: 100%
+                width: 100%
+                background-color: $white
+                flex-direction: column
+                z-index: 9999
+
+            li
+                margin: 0
+                padding: .4rem .8rem
+                @media(max-width: 767px)
+                    margin: .4rem 0
+                &.current-menu-item
+                    color: $primary
+
+                a
+                    text-decoration: none
+                    font-weight: $bold
+                    text-transform: uppercase
+                    padding: .4rem
+                    @media(max-width: 767px)
+                        font-size: 1.2rem
+
+        &.open
+            .header__navigation--trigger
+                span
+                    transition: all .2s ease
+                    background-color: transparent
+
+                    &::before
+                        top: 0
+                        transform: rotate(-45deg)
+                        background-color: $dark !important
+                        transition: transform .2s linear .2s, top .2s linear
+
+                    &::after
+                        top: 0
+                        transform: rotate(45deg)
+                        background-color: $dark !important
+                        transition: transform .2s linear .2s, top .2s linear
+
+            .header__navigation--list
+                left: 0
+                transition: all ease .4s

@@ -1,0 +1,42 @@
+.postplayer
+    position: relative
+    margin-top: 1rem
+    display: grid
+    grid-template-columns: 75% calc(25% - 2rem)
+    grid-column-gap: 2rem
+    grid-row-gap: 1rem
+    @media(max-width: 1023px)
+        grid-template-columns: 65% calc(35% - 1rem)
+        grid-column-gap: 1rem
+    @media(max-width: 767px)
+        grid-template-columns: repeat(1, 1fr)
+    &__column
+        position: relative
+
+        video
+            width: 100%
+            height: auto
+
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+
+            li
+                padding: .8rem
+                background-color: rgba($white, .2)
+                border-radius: .4rem
+                margin-bottom: .4rem
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                font-weight: $bold
+                cursor: pointer
+
+                svg
+                    height: 16px
+                    margin-right: .8rem
+                    fill: rgba($light, .4)
+
+                span
+                    flex: 1

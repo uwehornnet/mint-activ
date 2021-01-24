@@ -1,0 +1,130 @@
+.home
+    position: relative
+
+    &__container
+        @extend .container
+        margin-top: 4rem
+        margin-bottom: 4rem
+
+.grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 2rem
+    grid-row-gap: 2rem
+    @media(max-width: 767px)
+        grid-template-columns: repeat(1, 1fr)
+
+    &__box
+        position: relative
+
+        &--header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-bottom: 1px solid $light
+            padding: .4rem 0
+            h3
+                text-transform: uppercase
+            a
+                text-decoration: none
+                color: $primary
+                text-transform: uppercase
+                font-weight: $bold
+                font-size: 12px
+                display: flex
+                align-items: center
+                svg
+                    height: 12px
+                    fill: $primary
+                    margin-left: .8rem
+
+        &--body
+            position: relative
+
+            &.flex
+                display: flex
+                justify-content: flex-start
+                align-items: flex-start
+                padding-top: 1rem
+                margin-bottom: 4rem
+                img
+                    position: relative
+                    margin-right: 1rem
+                    width: 100px
+                    height: 100px
+                
+                p
+                    flex: 1
+                    margin: 0
+                    max-width: 400px
+
+.reference
+    position: relative
+    display: flex
+    align-items: flex-start
+    margin: 1rem 0 2rem
+    &__thumbnail
+        height: 100px
+        min-width: 100px
+        border-radius: 4px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        margin-right: 1rem
+
+    &__body
+        strong
+            display: block
+            margin-bottom: .1rem
+        p
+            margin: 0 0 .8rem 0
+        a
+            text-decoration: none
+            text-transform: uppercase
+            font-weight: $bold
+            font-size: 12px
+            display: flex
+            align-items: center
+            svg
+                height: 12px
+                fill: $primary
+                margin-left: .8rem
+
+.downloads
+    position: relative
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid $light
+        padding: .4rem 0
+        h3
+            text-transform: uppercase
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        border-bottom: 1px solid rgba($light, .5)
+        padding: .4rem 0
+        &:last-of-type
+            border-bottom: none
+        &--inner
+            display: flex
+            align-items: center
+            p
+                font-weight: $bold
+                a
+                    color: inherit
+                    font-size: inherit
+            svg
+                fill: $light
+                height: 24px
+                display: inline-block
+                margin-right: 1rem
+        a
+            text-transform: uppercase
+            font-weight: $bold
+            text-decoration: none
+            color: $primary
+            font-size: 12px

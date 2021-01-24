@@ -57,3 +57,7 @@ function add_svg_to_upload_mimes($upload_mimes)
 }
 
 add_filter('upload_mimes', 'add_svg_to_upload_mimes');
+
+
+include 'reference-cpt.php';
+include 'downloads-cpt.php';

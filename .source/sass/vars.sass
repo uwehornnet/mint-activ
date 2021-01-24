@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap')
+@import '../../node_modules/flatpickr/dist/themes/airbnb.css'
+@import '../../node_modules/swiper/dist/css/swiper.css'
+
+$fontfamily: 'Work Sans', sans-serif
+$regular: 400
+$bold: 600
+//colors
+
+$primary: #00FFD1
+$videobg: #002140
+$dark: #101011
+$white: #ffffff
+$light: #E5E5E5
+
+
+*
+    box-sizing: border-box
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+html,
+body
+    margin: 0
+    padding: 0
+
+body
+    font-family: $fontfamily
+    font-size: 16px
+    line-height: 1.4
+    width: 100%
+    @media(max-width: 767px)
+        font-size: 14px
+
+h1, h2, h3, h4, h5, h6
+    line-height: 1.4
+    margin: 0
+    font-weight: $bold
+
+p
+    font-weight: $regular
+
+a
+    color: inherit
+
+img
+    max-width: 100%
+    height: auto
+.container
+    width: 90%
+    max-width: 1140px
+    margin: 0px auto
+
+.button
+    appearance: none
+    outline: none
+    box-shadow: none
+    background-color: $primary
+    color: $dark
+    font-size: 1rem
+    text-transform: uppercase
+    padding: .8rem 2rem
+    text-decoration: none
+    font-weight: $bold
+
+
